@@ -3,19 +3,7 @@
 one:
   nombre: MyString
   imagen: MyString
-  descripcion: 
-  g: MyString
-  scaffold: MyString
-  Proyecto: MyString
-  nombre: MyString
-  imagen: MyString
 
 two:
-  nombre: MyString
-  imagen: MyString
-  descripcion: 
-  g: MyString
-  scaffold: MyString
-  Proyecto: MyString
   nombre: MyString
   imagen: MyString

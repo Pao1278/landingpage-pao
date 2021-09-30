@@ -17,7 +17,7 @@ class ProyectosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create proyecto" do
     assert_difference('Proyecto.count') do
-      post proyectos_url, params: { proyecto: { Proyecto: @proyecto.Proyecto, descripcion: @proyecto.descripcion, g: @proyecto.g, imagen: @proyecto.imagen, nombre: @proyecto.nombre, scaffold: @proyecto.scaffold } }
+      post proyectos_url, params: { proyecto: { imagen: @proyecto.imagen, nombre: @proyecto.nombre } }
     end
 
     assert_redirected_to proyecto_url(Proyecto.last)
@@ -34,7 +34,7 @@ class ProyectosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update proyecto" do
-    patch proyecto_url(@proyecto), params: { proyecto: { Proyecto: @proyecto.Proyecto, descripcion: @proyecto.descripcion, g: @proyecto.g, imagen: @proyecto.imagen, nombre: @proyecto.nombre, scaffold: @proyecto.scaffold } }
+    patch proyecto_url(@proyecto), params: { proyecto: { imagen: @proyecto.imagen, nombre: @proyecto.nombre } }
     assert_redirected_to proyecto_url(@proyecto)
   end
 

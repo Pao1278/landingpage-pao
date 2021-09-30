@@ -7,12 +7,6 @@
     <tr>
       <th>Nombre</th>
       <th>Imagen</th>
-      <th>Descripcion</th>
-      <th>G</th>
-      <th>Scaffold</th>
-      <th>Proyecto</th>
-      <th>Nombre</th>
-      <th>Imagen</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,12 +14,6 @@
   <tbody>
     <% @proyectos.each do |proyecto| %>
       <tr>
-        <td><%= proyecto.nombre %></td>
-        <td><%= proyecto.imagen %></td>
-        <td><%= proyecto.descripcion %></td>
-        <td><%= proyecto.g %></td>
-        <td><%= proyecto.scaffold %></td>
-        <td><%= proyecto.Proyecto %></td>
         <td><%= proyecto.nombre %></td>
         <td><%= proyecto.imagen %></td>
         <td><%= link_to 'Show', proyecto %></td>

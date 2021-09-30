@@ -14,12 +14,8 @@ class ProyectosTest < ApplicationSystemTestCase
     visit proyectos_url
     click_on "New Proyecto"
 
-    fill_in "Proyecto", with: @proyecto.Proyecto
-    fill_in "Descripcion", with: @proyecto.descripcion
-    fill_in "G", with: @proyecto.g
     fill_in "Imagen", with: @proyecto.imagen
     fill_in "Nombre", with: @proyecto.nombre
-    fill_in "Scaffold", with: @proyecto.scaffold
     click_on "Create Proyecto"
 
     assert_text "Proyecto was successfully created"
@@ -30,12 +26,8 @@ class ProyectosTest < ApplicationSystemTestCase
     visit proyectos_url
     click_on "Edit", match: :first
 
-    fill_in "Proyecto", with: @proyecto.Proyecto
-    fill_in "Descripcion", with: @proyecto.descripcion
-    fill_in "G", with: @proyecto.g
     fill_in "Imagen", with: @proyecto.imagen
     fill_in "Nombre", with: @proyecto.nombre
-    fill_in "Scaffold", with: @proyecto.scaffold
     click_on "Update Proyecto"
 
     assert_text "Proyecto was successfully updated"
