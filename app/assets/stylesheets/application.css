@@ -21,3 +21,15 @@
 #signin-form input[type=password] {
   width: 100%
 }
+
+.btn.btn-danger {
+  color: white;
+}
+
+.btn.btn-secondary {
+  color: white;
+}
+
+.btn.btn-primary {
+  color: white;
+}
