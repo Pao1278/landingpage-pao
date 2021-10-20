@@ -5,13 +5,13 @@ Rails.application.routes.draw do
   resources :orden_proyectos
   resources :ordens do
     collection do
-      get :carrito
+      post :carrito
     end
   end
   resources :clientes
   resources :productos do
     member do
-      post :compar
+      get :comprar
     end
     collection do
       get :filter
