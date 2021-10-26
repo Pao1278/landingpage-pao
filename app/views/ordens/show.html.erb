@@ -1,3 +1,7 @@
+<style type="text/css" media="print">
+
+</style>
+
 <table class="table">
   <tbody>
     <tr>
@@ -79,30 +83,7 @@
   </tbody>
 </table>
 
-<p>
-  <strong>Cliente:</strong>
-  <%= @orden.cliente_id %>
-</p>
-
-<p>
-  <strong>Codigo:</strong>
-  <%= @orden.codigo %>
-</p>
-
-<p>
-  <strong>Proceso:</strong>
-  <%= @orden.proceso %>
-</p>
-
-<p>
-  <strong>Entrega:</strong>
-  <%= @orden.entrega %>
-</p>
-
-<p>
-  <strong>Cierre:</strong>
-  <%= @orden.cierre %>
-</p>
-
-<%= link_to 'Editar', edit_orden_path(@orden) %> |
-<%= link_to 'Atras', ordens_path %>
+<%= link_to 'Editar', edit_orden_path(@orden), class:"btn btn-primary d-print-none" %>
+<%= link_to 'Atras', ordens_path, class:"btn btn-danger d-print-none" %>
+<a onclick="window.print()" 
+class="btn btn-primary d-print-none">Imprimir</a>
