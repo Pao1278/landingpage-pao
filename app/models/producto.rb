@@ -16,8 +16,8 @@ class Producto < ApplicationRecord
     :imagen, presence: { message: "Este campo es requerido." } 
   
   validates :descripcion,
-    length: {minimum:15, maximum:200,
-    message: "El nombre debe estar entre 15 y 200 caracteres"
+    length: {minimum:4, maximum:100,
+    message: "El nombre debe estar entre 4 y 100 caracteres"
   }
 
   validates :descripcion,
