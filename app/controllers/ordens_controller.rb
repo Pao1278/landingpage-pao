@@ -10,11 +10,11 @@ class OrdensController < ApplicationController
     @ordens = Orden.all
   end
 
-  def carrito
+  def carrito   
     @qty = params[:cantidad]
     @producto_id = params[:producto_id]
 
-    #Buscamos al cliente asociado al usuario
+ #Buscamos al cliente asociado al usuario
     cliente = Cliente.where(user_id: current_user.id).first
     if cliente.blank?
       #En caso de no existir, lo creamos
@@ -42,6 +42,15 @@ class OrdensController < ApplicationController
       ord.cierre = "2016-10-30"
       ord.save()
     end
+    @orden = ord
+    if @qty.blank? or @producto_id.blank?
+      render
+        return
+    end
+
+    @producto_obj = Producto.find(@producto_id)
+
+   
     #Asocia la orden con el producto, pero primero la busca
     oprod = OrdenProducto
       .where(orden_id: ord.id, 
@@ -53,9 +62,15 @@ class OrdensController < ApplicationController
       oprod.producto_id = @producto_id
       oprod.orden_id = ord.id
       oprod.cantidad = @qty
+      oprod.precio = @producto_obj.precio
       oprod.instrucciones = "---"
       oprod.descuento = 0
       oprod.save
+    else 
+    #Si la relación producto vs orden ya existe entonces puedo actualizar el precio y la cantidad.
+    oprod.precio = @producto_obj.precio
+    oprod.cantidad = @qty
+    oprod.save
     end
     @orden = ord
   end

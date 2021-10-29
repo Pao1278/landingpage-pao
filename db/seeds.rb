@@ -24,40 +24,48 @@ Producto.create([{
   nombre: "Remitex",
   descripcion: "Medicamento Antialérgico",
   imagen: "https://cdn.pixabay.com/photo/2014/02/03/11/51/medicine-257349__340.jpg",
+  precio: 12,
   categorium_id: Categorium.first.id 
 }, {
   nombre: "Dicogel",
   descripcion: "Diclofenaco",
   imagen: "https://cdn.pixabay.com/photo/2020/08/19/17/18/cream-5501534__480.jpg",
+  precio: 13,
   categorium_id: Categorium.first.id 
 }, {
   nombre: "Agua Termal Vichy",
   descripcion: "Hidratación cutanea",
   imagen: "https://cdn.pixabay.com/photo/2018/01/15/22/22/essential-oils-3084952__340.jpg",
+  precio: 14,
   categorium_id: Categorium.where(nombre: "Cuidado y Belleza").first.id
 }, {
   nombre: "Balsamo Labial Beauty",
   descripcion: "Humectación de Labios",
   imagen: "https://cdn.pixabay.com/photo/2017/07/31/11/29/people-2557447__340.jpg",
+  precio: 15,
   categorium_id: Categorium.where(nombre: "Cuidado y Belleza").first.id
 }, {
   nombre: "Aceite Nutritivo Loreal Paris",
   descripcion: "Hidratación Capilar",
   imagen: "https://cdn.pixabay.com/photo/2018/02/08/13/16/essential-oil-3139479__340.jpg",
+  precio: 16,
   categorium_id: Categorium.where(nombre: "Productos Naturales").first.id
 }, {
   nombre: "Shampoo Creigtons",
   descripcion: "Shampoo Hidratante",
   imagen: "https://cdn.pixabay.com/photo/2020/04/15/11/36/shampoo-5046291__340.jpg",
+  precio: 17,
   categorium_id: Categorium.where(nombre: "Productos Naturales").first.id
 }, {
   nombre: "Perfume Cacharel",
   descripcion: "Perfume de Mujer",
   imagen: "https://cdn.pixabay.com/photo/2018/08/27/15/09/safe-3635196__340.jpg",
+  precio: 18,
   categorium_id: Categorium.where(nombre: "Productos Exclusivos").first.id
 }, {
   nombre: "Perfume Ralph Lauren",
   descripcion: "Perfume Mujer",
   imagen: "https://cdn.pixabay.com/photo/2018/03/30/17/34/perfume-3275960__340.jpg",
+  precio: 19,
   categorium_id: Categorium.where(nombre: "Productos Exclusivos").first.id
 }])
