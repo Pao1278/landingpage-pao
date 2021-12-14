@@ -11,6 +11,11 @@ class OrdensController < ApplicationController
   end
 
   def confirmar
+    if params[:confirmado].blank?
+    else 
+      @orden = Orden.find(params[:confirmado])
+      return
+    end
     #Buscamos al cliente asociado al usuario
     cliente = Cliente.where(user_id: current_user.id).first
     if cliente.blank?
@@ -26,6 +31,7 @@ class OrdensController < ApplicationController
     # Ejemplo: sus ordenes son:50,60,70,80,90
     # Orden descendentes => 90, 80, 70, 60, 50
     ord = Orden.where(cliente_id: cliente.id)
+    .where("proceso = '2016-10-30'")
     .order("id desc")
     .first
 
